@@ -1,0 +1,88 @@
+### Example 1
+### test the MOVE command
+
+    PLACE 0,0,NORTH
+    MOVE
+    REPORT
+
+Expected output:
+
+    0,1,NORTH
+
+### Example 2
+### test the LEFT command
+
+    PLACE 0,0,NORTH
+    LEFT
+    REPORT
+
+Expected output:
+
+    0,0,WEST
+
+### Example 3
+### test the MOVE and LEFT command
+
+    PLACE 1,2,EAST
+    MOVE
+    MOVE
+    LEFT
+    MOVE
+    REPORT
+
+Expected output
+
+    3,3,NORTH
+
+### Example 4
+### PLACE the robot out of the table
+
+    PLACE 5,6,EAST
+    PLACE 4,4,EAST
+    REPORT
+
+Expected output
+
+    4,4,EAST
+
+### Example 5
+### try to make the robot fall off the table
+
+    PLACE 3,3,EAST
+    MOVE
+    MOVE
+    MOVE
+    MOVE
+    MOVE
+    MOVE
+    MOVE
+    REPORT
+
+Expected output
+
+    5,3,EAST
+
+### Example 6
+### test the RIGHT command
+
+    PLACE 0,0,NORTH
+    RIGHT
+    REPORT
+
+Expected output:
+
+    0,0,EAST
+
+### Example 7
+### place the robot two times
+
+    PLACE 0,0,NORTH
+    RIGHT
+    MOVE
+    PLACE 2,3,EAST
+    MOVE
+    REPORT
+
+Expected output:
+
+    3,3,EAST
